@@ -1,6 +1,8 @@
 //Use the concatenation operator to concatenate each letter of your firstname into a string one letter by one.
 console.log("G" + "i" + "u" + "l" + "i" + "a" + "n" + "o");
 
+//Coding-Task: Use operators & datay types
+
 // Error! Make it work "console.log("Hallo";)""
 console.log("Hallo");
 
