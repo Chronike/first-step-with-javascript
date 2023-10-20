@@ -2,10 +2,18 @@
 const size = 25;
 let result;
 
-if (size < 10) {
+/*if (size < 10) {
   result = "Greater than 10";
 } else if (size > 20) {
   result = "Greater than 20";
+} else {
+  result = "Lower than 10";
+}*/ //falsch
+
+if (size > 20) {
+  result = "Greater than 20";
+} else if (size > 10) {
+  result = "Greater than 10";
 } else {
   result = "Lower than 10";
 }
@@ -16,10 +24,11 @@ console.log(result);
 //Implementieren Sie eine oddEven Funktion.
 
 let oddEven = function (n) {
-  if (n % 2 == 0) {
-    return "Number is odd";
+  if (n % 2 === 0) {
+    return "even";
+  } else {
+    return "odd";
   }
-  return "Number is even";
 };
 
 console.log(oddEven(4));
@@ -35,7 +44,7 @@ console.log(oddEven(10));
 // result should be even
 
 //Implementieren Sie eine oldYoung Funktion.
-function oldYoung(age) {
+/*function oldYoung(age) {
   if (age >= 50) {
     return "elder person";
   } else if (age >= 16) {
@@ -44,6 +53,19 @@ function oldYoung(age) {
     return "children";
   } else {
     return "invalid parameter";
+  }
+}*/
+
+function oldYoung(age) {
+  if (typeof age !== "number" || age < 0) {
+    return "invalid parameter";
+  }
+  if (age >= 50) {
+    return "elder person";
+  } else if (age >= 16) {
+    return "young person";
+  } else if (age < 16 && age >= 0) {
+    return "children";
   }
 }
 
